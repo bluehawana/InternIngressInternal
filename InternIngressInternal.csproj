@@ -314,11 +314,14 @@
 
   <ItemGroup>
     <Folder Include="Intern.Infrastructure\Migrations\" />
+<<<<<<< HEAD
     <Folder Include="Intern.Web\Views\Education\" />
     <Folder Include="Intern.Web\Views\Experience\" />
     <Folder Include="Intern.Web\Views\Project\" />
     <Folder Include="Intern.Web\Views\Skill\" />
     <Folder Include="Intern.Web\wwwroot\images\" />
+=======
+>>>>>>> 381f5bcd1dc8994e048975415536031dcf9c4a2d
   </ItemGroup>
 
   <ItemGroup>

@@ -14,6 +14,10 @@ namespace Intern.Domain.Entities
         public string Position { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 381f5bcd1dc8994e048975415536031dcf9c4a2d
         public string Description { get; set; }
 
     }

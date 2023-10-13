@@ -1,13 +1,20 @@
-﻿using InternIngressInternal.Intern.Application.DTOs; // Assuming you have DTOs defined in your Application layer
-using InternIngressInternal.Intern.Application.Services; // Assuming you have service interfaces defined in your Application layer
+<<<<<<< HEAD
+﻿using InternIngressInternal.Intern.Application.DTOs; // We have DTOs defined in your Application layer
+using InternIngressInternal.Intern.Application.Services; // We have service interfaces defined in your Application layer
 using InternIngressInternal.Intern.Web.Models; // ViewModels specific to your Web project
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
+=======
+﻿using InternIngressInternal.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+>>>>>>> 381f5bcd1dc8994e048975415536031dcf9c4a2d
 
 namespace InternIngressInternal.Intern.Web.Controllers
 {
     public class CVController : Controller
     {
+<<<<<<< HEAD
         private readonly ICVService _cvService;
         private readonly IMapper _mapper;
 
@@ -15,10 +22,18 @@ namespace InternIngressInternal.Intern.Web.Controllers
         {
             _cvService = cvService;
             _mapper = mapper;
+=======
+        private readonly ILogger<CVController> _logger;
+
+        public CVController(ILogger<CVController> logger)
+        {
+            _logger = logger;
+>>>>>>> 381f5bcd1dc8994e048975415536031dcf9c4a2d
         }
 
         public IActionResult Index()
         {
+<<<<<<< HEAD
             var cvDTOs = _cvService.GetAllCVs();
             var cvViewModels = _mapper.Map<IEnumerable<CVViewModel>>(cvDTOs);
             return View(cvViewModels);
@@ -26,10 +41,17 @@ namespace InternIngressInternal.Intern.Web.Controllers
 
         [HttpGet]
         public IActionResult Create()
+=======
+            return View();
+        }
+
+        public IActionResult Privacy()
+>>>>>>> 381f5bcd1dc8994e048975415536031dcf9c4a2d
         {
             return View();
         }
 
+<<<<<<< HEAD
         [HttpPost]
         public IActionResult Create(CVViewModel cvViewModel)
         {
@@ -89,5 +111,12 @@ namespace InternIngressInternal.Intern.Web.Controllers
   
        
 
+=======
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+>>>>>>> 381f5bcd1dc8994e048975415536031dcf9c4a2d
     }
 }
